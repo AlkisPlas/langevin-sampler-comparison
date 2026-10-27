@@ -1,7 +1,7 @@
 # A comparison of Langevin Sampling Algorithms
 
 This repository contains Python code that compares three Langevin sampling algorithms
-(ULA, MALA and BAOAB). The code runs the algorithms on eight target distributions, in
+(ULA, MALA and kinetic langevin using the BAOAB splitting scheme). The code runs the algorithms on eight target distributions, in
 dimensions from 1 to 1000. It also computes diagnostic metrics and creates corresponding figures.
 
 ## Algorithms
