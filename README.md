@@ -6,11 +6,11 @@ dimensions from 1 to 1000. It also computes diagnostic metrics and creates corre
 
 ## Algorithms
 
-| Algorithm | Step | Bias |
-|---|---|---|
-| ULA (Unadjusted Langevin Algorithm) | A gradient step plus Gaussian noise. | Yes. The bias is proportional to η. |
-| MALA (Metropolis-Adjusted Langevin Algorithm) | The ULA step is a proposal. A Metropolis–Hastings test accepts or rejects it. | No, for each η. |
-| BAOAB | The state has a position and a velocity (kinetic Langevin). The step has five parts: B, A, O, A, B. | Yes, but smaller. The bias is proportional to η². On a Gaussian target, the position has no bias. |
+| Algorithm | Type | Step | Bias |
+|---|---|---|---|
+| ULA (Unadjusted Langevin Algorithm) | Overdamped | A gradient step plus Gaussian noise. | Yes. The bias is proportional to η. |
+| MALA (Metropolis-Adjusted Langevin Algorithm) | Overdamped | The ULA step is a proposal. A Metropolis–Hastings test accepts or rejects it. | No, for each η. |
+| Kinetic Langevin (BAOAB splitting) | Underdamped | The state has a position and a velocity (kinetic Langevin). The step has five parts: B, A, O, A, B. | Yes, but smaller. The bias is proportional to η². On a Gaussian target, the position has no bias. |
 
 Each algorithm uses one new gradient per step.
 
