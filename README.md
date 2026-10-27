@@ -16,16 +16,16 @@ Each algorithm uses one new gradient per step.
 
 ## Target distributions
 
-| Target | Difficulty | Parameter | Dimensions d |
-|---|---|---|---|
-| Gaussian | None. It is the reference. | — | 1, 3, 5, 10, 20, 50, 100, 200, 500, 1000 |
-| Student-t | Tails that decrease slowly | ν = 5 | 1, 3, 5, 10, 20, 50, 100, 200, 500, 1000 |
-| Cauchy | Very heavy tails. No mean and no variance. | ν = 1 | 1, 3, 5, 10, 20, 50, 100, 200, 500, 1000 |
-| Anisotropic Gaussian | The variances go from 1 to κ. | κ = 1000 | 2, 4, 10, 20, 50, 100, 200, 500, 1000 |
-| Banana | Curved dependence in each pair of coordinates | b = 0.03 | 2, 4, 10, 20, 50, 100, 200, 500, 1000 |
-| Gaussian mixture | Three peaks at −a, 0, a on the first coordinate, with low density between them | a = 6 | 2, 4, 10, 20, 50, 100, 200, 500, 1000 |
-| Funnel | The scale of the coordinates changes with the first coordinate v | σ_v = 2 | 2, 4, 10, 20, 50, 100, 200, 500, 1000 |
-| Double well | Two wells in each coordinate, with a barrier between them | β = 16 | 2, 4, 10, 20, 50, 100, 200, 500, 1000 |
+| Target | Difficulty |
+|---|---|
+| Gaussian | None. It is the reference. |
+| Student-t | Tails that decrease slowly |
+| Cauchy | Very heavy tails. No mean and no variance. |
+| Anisotropic Gaussian | The variances go from 1 to κ. |
+| Banana | Curved dependence in each pair of coordinates |
+| Gaussian mixture | Three peaks at −a, 0, a on the first coordinate, with low density between them |
+| Funnel | The scale of the coordinates changes with the first coordinate v |
+| Double well | Two wells in each coordinate, with a barrier between them |
 
 For each target, the code also gives the true mean, variance, quantiles and CDF of each
 coordinate. The metrics compare the samples with these values.
