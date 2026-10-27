@@ -2,25 +2,7 @@
 
 This repository contains Python code that compares three Langevin sampling algorithms
 (ULA, MALA and BAOAB). The code runs the algorithms on eight target distributions, in
-dimensions from 1 to 1000. It also computes diagnostic metrics and makes the figures.
-
-## What the study does
-
-A sampling algorithm makes a chain of points. After many steps, the points must have
-the distribution of a given target. The three algorithms use the gradient of the
-log-density of the target. They do not need the normalizing constant.
-
-The study has these steps:
-
-1. Run each algorithm on each target and in each dimension.
-2. Change the step size η on a grid. For BAOAB, also change the friction γ.
-3. Run each configuration with 20 different random seeds.
-4. Find the best configuration for each algorithm, target and dimension.
-5. Run the best configurations for 10⁶ steps. This shows if the error decreases with
-   more steps, or if it stays (bias).
-
-Each chain in the grid has 50,000 steps. The first 5,000 steps are not used (burn-in).
-The grid has 45,720 chains.
+dimensions from 1 to 1000. It also computes diagnostic metrics and creates corresponding figures.
 
 ## Algorithms
 
